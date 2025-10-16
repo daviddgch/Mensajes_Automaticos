@@ -1,1 +1,6 @@
 /Base_De_Datos
+.venv/
+__pycache__/
+*.pyc
+Base_De_Datos.txt
+.venv1/
