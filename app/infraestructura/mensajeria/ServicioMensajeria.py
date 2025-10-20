@@ -7,7 +7,14 @@ from app.infraestructura.mensajeria.ConstantesMensajeria import ConstantesMensaj
 class ServicioMensajeria(AServicioMensajeria):
 
     def enviarPorMensajeria(self, numero, body):
-        conn = self.configurarMensajeria.request("POST", f"/{ConstantesMensajeria.INSTANCIA}/messages/chat", self.armarURL(numero, body), self.armarHeaders())
+        conn = self.configurarMensajeria()
+        conn.request(
+            "POST",
+            f"/{ConstantesMensajeria.INSTANCIA}/messages/chat",
+            self.armarURL(numero, body),
+            self.armarHeaders()
+        )
+
         res = conn.getresponse()
         data = res.read()
 

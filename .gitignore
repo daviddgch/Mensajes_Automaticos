@@ -1,6 +1,8 @@
 /Base_De_Datos
+Base_De_Datos_Mensajes
 .venv/
 __pycache__/
 *.pyc
 Base_De_Datos.txt
 .venv1/
+enviroment.env

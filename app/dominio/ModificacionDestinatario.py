@@ -14,3 +14,19 @@ class ModificacionDestinatario(AModificacionDestinatario):
         print("Agregado a destinatario")
         return True
 
+    def agregarMensaje(self, mensajeNuevo):
+        self.baseDatos.agregarMensajeBD(mensajeNuevo)
+        pass
+
+    def obtenerTodosDestinatarios(self):
+        return self.baseDatos.obtenerTodosDestinatarios()
+
+    def obtenerMensajes(self):
+        return self.baseDatos.obtenerMensajes()
+
+    def borrarDestinatario(self, destinatario: DestinatarioDTO):
+        self.baseDatos.borrarDestinatario(destinatario)
+
+    def borrarMensaje(self, mensaje):
+        self.baseDatos.borrarMensaje(mensaje)
+
